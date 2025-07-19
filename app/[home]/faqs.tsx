@@ -50,7 +50,7 @@ const faqs = [
     return (
       <>
        {/* FAQ Section */}
-      <section className="relative py-10">
+      <section className="relative py-10 bg-slate-50">
         <Container className='flex flex-col md:flex-row items-start justify-between'>
             <div className="">
              <SectionHeader

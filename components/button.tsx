@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const Button = ({ children, variant = "primary", size = "md", className = "", link, ...props }: { children: React.ReactNode, variant?: "primary" | "secondary" | "outline", size?: "sm" | "md" | "lg", className?: string, link: string}) => {
+export const Button = ({ children, variant = "primary", size = "md", className = "", type,  link, ...props }: { children: React.ReactNode, variant?: "primary" | "secondary" | "outline", size?: "sm" | "md" | "lg", className?: string, type?: "submit" | "reset" | "button", [key: string]: any, link?: string}) => {
   const baseClasses = "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
@@ -16,13 +16,14 @@ export const Button = ({ children, variant = "primary", size = "md", className =
   };
   
   return (
-   <Link href={link}> 
+   <a href={link}> 
     <button 
+      type={type}
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
       {children}
     </button>
-    </Link>
+    </a>
   );
 };
