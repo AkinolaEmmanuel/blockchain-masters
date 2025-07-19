@@ -1,3 +1,4 @@
+"use client"
 import { Stars } from "lucide-react";
 import { motion } from "framer-motion";
 export const Container = ({ children, className }: { children: React.ReactNode, className?: string}) => (

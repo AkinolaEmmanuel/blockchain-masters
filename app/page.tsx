@@ -10,12 +10,13 @@ import { GlobalLoader } from "@/components/global-loader";
 import Image from "next/image";
 import Programs from "./[home]/programs";
 import Testimonials from "./[home]/testimonials";
+import { Whocanjoin, WhyJoin } from "./[home]/whocanjoin";
+import Faqs from "./[home]/faqs";
+import {Blog} from "@/components/blog";
 
 
 const HomePage = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [activeTab, setActiveTab] = useState<number | null>(null);
-  const [expandedFaq, setExpandedFaq] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
 
    
@@ -54,62 +55,7 @@ const HomePage = () => {
                   }
                 ]
 
-      const whoCanJoinData = [
-    {
-      id: 1,
-      title: "Aspiring Blockchain Developers",
-      description: "Ready to build the future with code",
-      icon: <Code className="w-6 h-6" />,
-      details: "Learn smart contracts, dApps, and Web3 development from zero to hero",
-      color: "from-purple-500 to-pink-500",
-      benefits: ["Hands-on coding projects", "Real-world blockchain apps", "Industry mentorship"]
-    },
-    {
-      id: 2,
-      title: "Entrepreneurs & Innovators",
-      description: "Building the next generation of Web3 businesses",
-      icon: <Rocket className="w-6 h-6" />,
-      details: "Transform your ideas into blockchain-powered ventures",
-      color: "from-blue-500 to-cyan-500",
-      benefits: ["Business model validation", "Funding opportunities", "Network access"]
-    },
-    {
-      id: 3,
-      title: "Career Switchers",
-      description: "Transitioning to the blockchain industry",
-      icon: <TrendingUp className="w-6 h-6" />,
-      details: "Leverage your existing skills in the Web3 ecosystem",
-      color: "from-green-500 to-emerald-500",
-      benefits: ["Skill bridging programs", "Career counseling", "Job placement support"]
-    },
-    {
-      id: 4,
-      title: "Crypto Enthusiasts",
-      description: "Understand the technology behind your investments",
-      icon: <Brain className="w-6 h-6" />,
-      details: "Go beyond trading to truly understand blockchain fundamentals",
-      color: "from-orange-500 to-red-500",
-      benefits: ["Technical analysis", "DeFi deep dives", "Investment strategies"]
-    },
-    {
-      id: 5,
-      title: "Students & Graduates",
-      description: "Future-proof your career with blockchain skills",
-      icon: <GraduationCap className="w-6 h-6" />,
-      details: "Start your professional journey in the most exciting tech field",
-      color: "from-indigo-500 to-purple-500",
-      benefits: ["Student discounts", "Internship programs", "Graduate support"]
-    },
-    {
-      id: 6,
-      title: "Enterprise Teams",
-      description: "Organizations adopting blockchain technology",
-      icon: <Building className="w-6 h-6" />,
-      details: "Upskill your team for blockchain integration and innovation",
-      color: "from-teal-500 to-blue-500",
-      benefits: ["Corporate training", "Custom curriculums", "Team certifications"]
-    }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -120,17 +66,17 @@ const HomePage = () => {
       <Hero />
 
       {/* Who We Are Section */}
-      <section className="my-20">
-        <Container className="flex flex-col md:flex-row items-center justify-between">
+      <section className="my-0 md:my-20">
+        <Container className="flex flex-col lg:flex-row items-center justify-between">
           <SectionHeader centered={false} title="Who we are" subtitle="Blockchain Masters"></SectionHeader>
-          <p className="text-justify text-black text-lg max-w-lg my-5">
+          <p className="text-justify text-black text-lg max-w-lg md:my-5">
             <span>Blockchain Masters Academy is an EdTech platform dedicated to making blockchain and Web3 education accessible, practical, and career-driven. </span>
             <span>We believe that blockchain isn't just for coders, tech bros, or crypto nerds but for everyone. Whether you’re a student, a small business owner, or someone simply curious about Web3 We’re here to help you understand Blockchain, use it, and grow with it.</span>
           </p>
         </Container>
 
         {/* Stats */}
-        <Container className="my-10 flex flex-col md:flex-row items-center justify-between">
+        <Container className="my-10 flex flex-col gap-y-10 lg:flex-row items-center justify-between">
           <div className="bg-orange-400 p-5">
           <Image src={"/students.jpg"} width={600} height={600} alt="" className="rounded-sm"/>
           </div>
@@ -197,21 +143,21 @@ const HomePage = () => {
       </section>
 
          {/*Our Values */}
-         <section className="py-20 bg-white">
+         <section className="pt-10 md:py-20 bg-white">
              <SectionHeader 
             centered={true}
             title="Values"
             subtitle="Our Core Values"
             className=""
           />
-         <Container className="my-5 lg:my-10 flex flex-col md:flex-row items-center justify-between">
-          <div className="w-full md:w-1/2"> 
+         <Container className="my-5 lg:my-10 flex flex-col gap-y-5 lg:flex-row items-center justify-center lg:justify-between">
+          <div className="w-full lg:w-1/2"> 
             <Image src={"/medium-shot-students.jpg"} width={600} height={600} alt="" className="rounded-sm"/>
           </div>
-            <div className="px-10 w-full md:w-1/2 xl:w-3/7">
-              <div className="space-y-5 my-5">
+            <div className="px-5 md:px-10 w-full lg:w-1/2 xl:w-3/7">
+              <div className="space-y-5 mt-5 md:my-5 grid md:grid-cols-3 lg:grid-cols-1 gap-5">
                 {values.map(({ icon, title, description }, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                  <div key={index} className="flex flex-col lg:flex-row items-start lg:items-center gap-3">
                     <div className="rounded-full p-2 bg-orange-700 hover:bg-orange-300">{icon}</div>
                     <div className="flex flex-col text-gray-900">
                       <span className="font-semibold text-2xl">{title}</span>
@@ -225,16 +171,10 @@ const HomePage = () => {
             </section>
 
      {/* Who Can Join Section */}
-      <section className="relative py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          {/* Animated background elements */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          </div>
-
+      <section className="relative md:py-10 px-4 bg-slate-50">
+        <Container>
           {/* Header */}
-          <div className={`flex items-center justify-between mb-16 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className={`flex flex-col lg:flex-row items-center justify-between transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               <SectionHeader
               title="Who Can Join"
               subtitle="Join Our Community"
@@ -245,68 +185,45 @@ const HomePage = () => {
             </p>
           </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-between">
-
-              <Image src={'/different-ethnicities.jpg'} width={600} height={600} alt="" className={`w-full md:w-1/2 rounded-sm transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}/>
-
-              <div className={`px-10 w-full md:w-1/2 xl:w-3/7 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-                <div className="space-y-5 my-5">
-                  {whoCanJoinData.map(({ icon, title, description }, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="rounded-full p-2 bg-orange-700 hover:bg-orange-300"><Check/></div>
-                      <div className="flex flex-col text-gray-900">
-                        <span className="font-semibold text-2xl">{title}</span>
-                        <span className="">{description}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          
+          <Whocanjoin/>
                 
-        </div>
+        </Container>
       </section>
 
       {/* Why Join */}
-      <section className="py-20 bg-gray-50">
+      <section className="bg-gray-50">
         <Container>
+          <div className="flex flex-col lg:flex-row items-center justify-between">
           <SectionHeader 
             title="Why Choose Blockchain Masters Academy?"
-            subtitle="Discover what makes our approach to blockchain education unique and effective"
+            subtitle="Why Join Us?"
+            centered={false}
+           
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+           <p className="text-xl text-gray-900 max-w-lg leading-relaxed">
+              Discover what makes our approach to blockchain education unique and effective
+            </p>
+          </div>
+        <WhyJoin/>
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyJoinReasons.map((reason, index) => (
               <FeatureCard key={index} {...reason} />
             ))}
-          </div>
+          </div> */}
         </Container>
       </section>
 
-     
+     {/* Testimonials */}
         <Testimonials/>
-      {/* Latest Blog Posts */}
-      <section className="py-20 bg-white">
-        <Container>
-          <SectionHeader 
-            title="Latest from Our Blog"
-            subtitle="Stay updated with the latest insights, tutorials, and industry news"
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, index: number) => (
-              <BlogCard key={index} {...post} />
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg" link="/">
-              View All Posts <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-          </div>
-        </Container>
-      </section>
+
+          {/* FAQs */}
+          <Faqs/>
+
+          {/* Blog */}
+          <Blog section="home"/>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-orange-500 text-white">
+      <section className="py-10 md:py-20 bg-orange-500 text-white">
         <Container>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -315,13 +232,13 @@ const HomePage = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Get exclusive access to blockchain resources, course updates, and industry insights
             </p>
-            <div className="flex flex-col sm:flex-row justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center gap-y-3 max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border-s border-y  border-white text-white rounded-lg rounded-e-none outline-none"
+                className="flex-1 px-4 py-3 md:border-s md:border-y md:border-e-0 border border-white text-white rounded-lg md:rounded-e-none outline-none"
               />
-              <Button variant="secondary" link="/" className="rounded-s-none border border-white outline-none">
+              <Button variant="secondary" link="/" className="md:rounded-s-none border border-white outline-none">
                 <Mail className="w-5 h-5 mr-2" />
                 Subscribe
               </Button>

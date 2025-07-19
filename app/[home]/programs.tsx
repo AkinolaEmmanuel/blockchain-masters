@@ -10,7 +10,7 @@ export default function Programs({section}: {section?: string}) {
     <>
      {/* Featured Programs */}
       <section className="py-20 bg-white">
-        <Container className="flex flex-col md:flex-row items-center justify-between">
+        <Container className="flex flex-col lg:flex-row items-center justify-between">
          {section == "home" &&
          <>
           <SectionHeader 

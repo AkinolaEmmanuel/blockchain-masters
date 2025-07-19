@@ -8,6 +8,7 @@ import { Button } from '@/components/button';
 import { ArrowRight } from 'lucide-react';
 import { GlobalLoader } from '@/components/global-loader';
 import Testimonials from '../[home]/testimonials';
+import Faqs from '../[home]/faqs';
 
 export default function Bootcamps() {
     const [isLoading, setIsLoading] = useState(true);
@@ -26,6 +27,7 @@ export default function Bootcamps() {
     {/* Featured Programs*/}
           <Programs section='bootcamps'/>
             <Testimonials/>
+            <Faqs/>
     </section>
     </>
   )

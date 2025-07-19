@@ -101,7 +101,7 @@ export const BlogCard = ({ title, excerpt, date, author, image, readTime }: { ti
     </div>
     <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
     <p className="text-gray-600 mb-4">{excerpt}</p>
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col md:flex-row item-start md:items-center gap-y-3 justify-between">
       <span className="text-sm text-gray-500">By {author}</span>
       <Button variant="outline" size="sm" link="/">
         Read More <ArrowRight className="w-4 h-4 ml-2" />
