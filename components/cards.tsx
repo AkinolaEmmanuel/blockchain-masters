@@ -3,6 +3,8 @@ import { ArrowRight, Star } from "lucide-react";
 import { Button } from "./button";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+
 
 export const Card = ({ children, className = "", hover = true }: { children: React.ReactNode, className?: string, hover?: boolean}) => (
   <motion.div 
@@ -63,13 +65,26 @@ export const CounterCard = ({ icon: Icon, count, label, delay = 0 }: {icon: any,
   );
 };
 
-export const FeatureCard = ({ icon: Icon, title, description, color = "orange" }: { icon: any, title: string, description: string, color?: string}) => (
+export const FeatureCard = ({ icon: Icon, title, description, color = "orange", dialog, dialogcontent }: { icon: any, title: string, description: string, color?: string, dialog?: boolean, dialogcontent?: {title: string, description: string, buttontext: string, buttonlink: string }}) => (
   <Card hover className="text-center hover:bg-orange-400 hover:text-white hover:transition duration-300">
     <div className={`bg-${color}-100 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center`}>
       <Icon className={`w-10 h-10 text-${color}-500`} />
     </div>
     <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
     <p className="text-gray-600">{description}</p>
+
+    {dialog &&
+    <Dialog>
+       <DialogTrigger className="my-5"><Button variant="primary" size="sm">Learn More</Button></DialogTrigger>
+       <DialogContent className="p-5">
+       <DialogHeader className="space-y-5 flex-col items-center">
+          <DialogTitle className="text-2xl md:text-3xl">{dialogcontent?.title}</DialogTitle>
+          <DialogDescription className="text-justify italic">{dialogcontent?.description}</DialogDescription>
+          <Button link={dialogcontent?.buttonlink} variant="secondary" size="sm" className="">{dialogcontent?.buttontext}</Button>
+       </DialogHeader>
+       </DialogContent>
+    </Dialog>
+    }
   </Card>
 );
 

@@ -16,7 +16,7 @@ export const Button = ({ children, variant = "primary", size = "md", className =
   };
   
   return (
-   <a href={link}> 
+   <a href={link} target="_blank"> 
     <button 
       type={type}
       className={`${baseClasses} ${variants[variant]} ${sizes[size]} ${className}`}

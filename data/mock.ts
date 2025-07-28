@@ -25,7 +25,12 @@ import {
   Rocket,
   UserCheck,
   Clock,
-  BarChart
+  BarChart,
+  Paintbrush,
+  Cpu,
+  PieChart,
+  School,
+  CalendarCheck
 } from 'lucide-react';
 
 
@@ -40,34 +45,110 @@ export const programs = [
   {
     icon: Code,
     title: "Blockchain Fundamentals",
-    description: "Master the core concepts of blockchain technology, cryptography, and distributed systems."
+    description: "Gain a solid foundation in blockchain, cryptographic security, and decentralized systems through hands-on learning."
   },
   {
     icon: Shield,
-    title: "Smart Contract Development",
-    description: "Learn to build and deploy smart contracts using Solidity and Web3 technologies."
+    title: "Trading",
+    description: "Understand how crypto markets work, and master technical analysis, risk management, and blockchain-based trading tools."
   },
   {
     icon: TrendingUp,
-    title: "DeFi & Web3 Applications",
-    description: "Explore decentralized finance protocols and build next-generation Web3 applications."
+    title: "Artificial Intelligence",
+    description: "Discover the intersection of blockchain and artificial intelligence to build smarter decentralized applications (dApps)."
   },
   {
     icon: BarChart,
-    title: "Crypto Trading & Investment",
-    description: "Understand cryptocurrency markets, trading strategies, and investment principles."
+    title: "Business Development",
+    description: "Learn how to launch, scale, and monetize blockchain startups and Web3 ventures through real-world business strategies."
   },
   {
     icon: Building,
-    title: "Blockchain for Business",
-    description: "Learn how to integrate blockchain solutions into traditional business models."
+    title: "Blockchain Development",
+    description: "Master Solidity, smart contracts, and full-stack dApp development using Web3.js, Ethers.js, and industry best practices."
   },
   {
     icon: Award,
-    title: "Certification Programs",
-    description: "Earn industry-recognized certifications to advance your blockchain career."
+    title: "UI & UX Design",
+    description: "Design intuitive, user-friendly Web3 apps with a focus on accessibility, usability, and decentralized UX flows."
   }
-];
+]
+
+export const events = [
+  {
+    icon: CalendarCheck,
+    title: "Web3 Hackathon",
+    description: "Compete with global builders to launch real blockchain projects in just 48 hours using smart contracts and DeFi tools.",
+    dialog: true,
+    dialogcontent: {
+      title: "Web3 Hackathon Challenge",
+      description: "Join forces with fellow developers, designers, and founders to build decentralized apps from scratch in just 48 hours. Showcase your skills to mentors and investors while solving real-world problems on the blockchain.",
+      buttontext: "Join the Hackathon",
+      buttonlink: "/"
+    }
+  },
+  {
+    icon: Users,
+    title: "Founders in Web3",
+    description: "Panel discussions with blockchain startup founders sharing their success stories, challenges, and funding tips.",
+    dialog: true,
+    dialogcontent: {
+      title: "Web3 Founder Panels",
+      description: "Hear firsthand from startup founders navigating the Web3 landscape. Learn how they built their teams, secured funding, and scaled their ideas in the decentralized economy.",
+      buttontext: "Explore the Sessions",
+      buttonlink: "/"
+    }
+  },
+  {
+    icon: School,
+    title: "Smart Contract Bootcamp",
+    description: "An intensive week-long camp focused on Solidity, contract testing, audits, and deployment to Ethereum testnets.",
+    dialog: true,
+    dialogcontent: {
+      title: "Smart Contract Developer Bootcamp",
+      description: "Master the fundamentals of Solidity and smart contract development in a focused, hands-on learning environment. Write secure code, test rigorously, and deploy to live testnets.",
+      buttontext: "Start Bootcamp",
+      buttonlink: "/"
+    }
+  },
+  {
+    icon: Cpu,
+    title: "Blockchain x AI Showcase",
+    description: "Explore cutting-edge projects combining artificial intelligence with decentralized apps and smart contracts.",
+    dialog: true,
+    dialogcontent: {
+      title: "AI + Blockchain Innovation Showcase",
+      description: "Discover how artificial intelligence enhances decentralized applications. Explore projects that integrate AI with smart contracts, oracles, and automated governance.",
+      buttontext: "View Showcase",
+      buttonlink: "/"    
+    }
+  },
+  {
+    icon: Paintbrush,
+    title: "Web3 UI/UX Sprint",
+    description: "Collaborate with designers and developers to build and test seamless Web3 interfaces in a fast-paced design sprint.",
+    dialog: true,
+    dialogcontent: {
+      title: "Web3 Design Sprint",
+      description: "Jump into a fast-paced sprint focused on building clean, accessible, and intuitive dApp interfaces. Collaborate with UX experts to reimagine Web3 usability.",
+      buttontext: "Join the Sprint",
+      buttonlink: "/"
+       }
+  },
+  {
+    icon: Rocket,
+    title: "Certification Ceremony",
+    description: "Celebrate the completion of your blockchain program and receive blockchain-verified certificates to boost your Web3 career.",
+    dialog: true,
+    dialogcontent: {
+      title: "Graduation & Certification Ceremony",
+      description: "Celebrate your journey and achievements with fellow graduates. Receive blockchain-verified credentials that showcase your skills to global employers and networks.",
+      buttontext: "View Details",
+      buttonlink: "/"
+    }
+  }
+]
+
 
 export const testimonials = [
   {

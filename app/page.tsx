@@ -77,12 +77,12 @@ const HomePage = () => {
 
         {/* Stats */}
         <Container className="my-10 flex flex-col gap-y-10 lg:flex-row items-center justify-between">
-          <div className="bg-orange-400 p-5">
+          <div className="flex-1 bg-orange-400 p-5">
           <Image src={"/students.jpg"} width={600} height={600} alt="" className="rounded-sm"/>
           </div>
-          <div className="space-y-5">
+          <div className="flex-1 space-y-5">
           <h1 className="font-bold text-3xl text-center text-black mb-5">Our Track Record Till Date</h1>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 gap-5">
             <CounterCard icon={Users} count={10500} label="Students Trained" delay={0} />
             <CounterCard icon={GraduationCap} count={8500} label="Graduates" delay={0.2} />
             <CounterCard icon={Award} count={92} label="Success Rate %" delay={0.4} />
@@ -135,7 +135,7 @@ const HomePage = () => {
             </Card>
            
           </div>
-           <Button variant="secondary" size="md" link="/" className="mt-8">
+           <Button variant="secondary" size="md" link="/join-us/as-a-member" className="mt-8">
             Join Our Community
             </Button>
          

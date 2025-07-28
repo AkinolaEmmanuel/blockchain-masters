@@ -6,6 +6,8 @@ import { Container } from "./section";
 import Link from "next/link";
 import { useState } from "react";
 import { Hamburger, Menu, X } from "lucide-react";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
+import { usePathname } from "next/navigation";
 
 
 const navItems = [
@@ -14,16 +16,23 @@ const navItems = [
         name: "Who we are"
     },
     {
-        link: "/bootcamps",
-        name: "Our Bootcamps"
-    },
-    {
-        link: "/events",
-        name: "Events"
+        link: "/bootcamps&events",
+        name: "Our Bootcamps & Events"
     },
     {
         link: "/join-us",
-        name: "Join Us"
+        name: "Join Us",
+        hasSubMenu: true,
+        subMenu: [
+          {
+            link: "/join-us/as-a-partner",
+            name: "As a Partner"
+          },
+          {
+            link: "/join-us/as-a-member",
+            name: "As a Member"
+          }
+        ]
     },
     {
         link: "/blog",
@@ -38,6 +47,10 @@ const navItems = [
 export default function Header() {
 
     const [isMobile, setIsMobile] = useState(false);
+
+    const active = usePathname();
+
+
 
     const toggleNav = () => {
         setIsMobile(!isMobile);
@@ -64,12 +77,37 @@ export default function Header() {
             </div>
            
                <div className="hidden lg:flex items-center space-x-8">
-                {navItems.map((item, index) => (
-                <Link key={index} href={item.link} className="text-gray-600 hover:text-orange-600 hover:underline">{item.name}</Link>
-                ))}
+                
+                {navItems.map((item, index) => 
+                  <div key={index}>
+                  {item.hasSubMenu ? 
+                    <NavigationMenu className="">
+                          <NavigationMenuList>
+                            <NavigationMenuItem>
+                              <NavigationMenuTrigger className={`text-gray-700 ${item.subMenu.map((i) => i.link.includes(active)) ? 'text-orange-600': 'text-gray-700'}`}>
+                               {item.name}
+                              </NavigationMenuTrigger>
+                              <NavigationMenuContent className="flex flex-col p-3">
+                               {item.subMenu.map((item) => (
+                                <Link key={item.name} href={item.link} className={`w-28 h-8 hover:text-orange-600 hover:underline`}>
+                                    {item.name}
+                                </Link>
+                               ))}
+                              </NavigationMenuContent>
+                            </NavigationMenuItem>
+                          </NavigationMenuList>
+                    </NavigationMenu>
+                    :
+                 <Link href={item.link} className={`text-gray-700 hover:text-orange-600 hover:underline ${item.link == active ? 'text-orange-600': 'text-gray-700'}`}>
+                 {item.name}
+                 </Link>
+                  }
+                </div>
+                  
+                )}
                
                 </div>
-                 <Button variant="primary" size="sm" link="/" className="lg:block hidden">Start Learning</Button>
+                 <Button variant="primary" size="sm" link="https://forms.gle/jq6SxJsStEzMG6Ee7" className="hidden! lg:inline-block!">Start Learning</Button>
                 <div className="flex lg:hidden">
                     {isMobile ?
                     <X className="text-black w-6 h-6" onClick={toggleNav}/>

@@ -160,7 +160,7 @@ export function Whocanjoin() {
                   ))}
                 </div>
                      
-            <Button variant="primary" size="md" link="/">Start your journey</Button>
+            <Button variant="primary" size="md" link="https://forms.gle/Zipt6M696kUA17Ph6">Start your journey</Button>
               </div>
 
               <div className="relative">
@@ -260,7 +260,7 @@ export function WhyJoin () {
                         <IconComponent size={32} className="text-white" />
                       </motion.div>
                       
-                      <div className="lg:h-fit">
+                      <div className="lg:h-fit min-h-48">
                         <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white group-hover:text-orange-100 transition-colors">
                           {reason.title}
                         </h3>
@@ -298,7 +298,7 @@ export function WhyJoin () {
             className="text-center mt-16"
           >
          
-            <Button variant="primary" size="md" link="/">Join Our Community</Button>
+            <Button variant="primary" size="md" link="https://forms.gle/Zipt6M696kUA17Ph6">Join Our Community</Button>
           </motion.div>
         </Container>
       </section>

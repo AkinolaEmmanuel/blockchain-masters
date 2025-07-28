@@ -54,7 +54,7 @@ export default function Contact() {
                         </Card>
                     </div>
                  
-                        <form className='space-y-5 my-10 w-full flex-1' action="https://formsubmit.co/emmanuelakinola255@gmail.com" method="POST">
+                        <form className='space-y-5 my-10 w-full flex-1' action="https://formsubmit.co/chainmastersacademy@gmail.com" method="POST">
                             <div className="flex flex-col lg:flex-row items-center gap-x-3">
                                 <input type="text" name='fullname' placeholder='Full Name' className='w-full p-3 xl:p-4 placeholder:text-lg border border-slate-500' />
                                 <input type="email" name='email' placeholder='E-mail' className='w-full p-3 xl:p-4 placeholder:text-lg border border-slate-500'/>

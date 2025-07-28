@@ -1,6 +1,8 @@
 "use client"
 import React from 'react'
 import { Container } from './section'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -10,10 +12,17 @@ export default function Footer() {
         <Container>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-8">
             <div>
-              <div className="flex items-center space-x-3 mb-4">
+              {/* <div className="">
+                <Link href={"/"}>
+              <Image src={"/logo.jpg"} alt="Logo" width={70} height={70} className="w-full h-auto object-cover"/>
+              </Link>
+              </div> */}
+               <div className="flex items-center space-x-3 mb-4">
+                {/*
                 <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
                   <div className="w-6 h-6 bg-white rounded transform rotate-45"></div>
                 </div>
+                 */}
                 <div>
                   <h3 className="font-bold">Blockchain Masters Academy</h3>
                   <p className="text-sm text-gray-400">Blockchain for Everyone</p>
@@ -39,8 +48,8 @@ export default function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><a href="/contact-us" className="text-gray-400 hover:text-white">Contact Us</a></li>
                 <li><a href="/join-us" className="text-gray-400 hover:text-white">Join Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Help Center</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Community</a></li>
+                {/* <li><a href="#" className="text-gray-400 hover:text-white">Help Center</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">Community</a></li> */}
               </ul>
             </div>
             
