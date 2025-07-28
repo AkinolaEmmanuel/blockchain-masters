@@ -26,7 +26,7 @@ export default function Bootcamps() {
     <section className='bg-white h-full'>
 
     {/* Featured Programs*/}
-          <Programs section='bootcamps'/>
+          <Programs section='home'/>
 
           <Programs section='events'/>
             <Testimonials/>

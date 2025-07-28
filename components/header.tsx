@@ -84,7 +84,7 @@ export default function Header() {
                     <NavigationMenu className="">
                           <NavigationMenuList>
                             <NavigationMenuItem>
-                              <NavigationMenuTrigger className={`text-gray-700 ${item.subMenu.map((i) => i.link.includes(active)) ? 'text-orange-600': 'text-gray-700'}`}>
+                              <NavigationMenuTrigger className={`text-gray-700 `}>
                                {item.name}
                               </NavigationMenuTrigger>
                               <NavigationMenuContent className="flex flex-col p-3">

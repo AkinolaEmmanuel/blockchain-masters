@@ -4,6 +4,7 @@ import { Button } from "./button";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import Link from "next/link";
 
 
 export const Card = ({ children, className = "", hover = true }: { children: React.ReactNode, className?: string, hover?: boolean}) => (
@@ -80,7 +81,7 @@ export const FeatureCard = ({ icon: Icon, title, description, color = "orange", 
        <DialogHeader className="space-y-5 flex-col items-center">
           <DialogTitle className="text-2xl md:text-3xl">{dialogcontent?.title}</DialogTitle>
           <DialogDescription className="text-justify italic">{dialogcontent?.description}</DialogDescription>
-          <Button link={dialogcontent?.buttonlink} variant="secondary" size="sm" className="">{dialogcontent?.buttontext}</Button>
+          <a href={dialogcontent?.buttonlink} className="my-3 p-2 bg-gray-100 border border-gray-500 text-center">{dialogcontent?.buttontext}</a>
        </DialogHeader>
        </DialogContent>
     </Dialog>

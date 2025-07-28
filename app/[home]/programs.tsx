@@ -12,9 +12,9 @@ export default function Programs({section}: {section?: string}) {
     <>
      {/* Featured Programs */}
       <section className="py-20 bg-white">
-        <Container className="flex flex-col lg:flex-row items-center justify-between">
-         {section == "home" || section == "bootcamps" &&
-         <>
+        <Container>
+         {section == "bootcamps" || section == "home" &&
+         <div className="flex flex-col lg:flex-row items-center justify-between">
           <SectionHeader 
             centered={false}
             title="Our Bootcamps"
@@ -25,7 +25,7 @@ export default function Programs({section}: {section?: string}) {
           <p className="text-justify text-black text-lg max-w-lg my-5">
             <span>Unlike many blockchain learning platforms that only scratch the surface or feel too complex, Blockchain Masters Academy bridges the gap with relatable teaching, real-life applications, and a supportive community. Whether you're exploring blockchain for the first time or aiming to build a career, we guide you from confusion to confidence. </span>
           </p>
-          </>
+          </div>
           }
 
            {section == "events" &&
@@ -41,7 +41,7 @@ export default function Programs({section}: {section?: string}) {
 
         </Container>
         <Container className="my-10">
-          {section == "bootcamps" &&
+          {section == "bootcamps" || section == "home" &&
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programs.map((program, index) => (
               <FeatureCard key={index} {...program} />
