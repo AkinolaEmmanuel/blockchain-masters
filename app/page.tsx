@@ -158,7 +158,7 @@ const HomePage = () => {
               <div className="space-y-5 mt-5 md:my-5 grid md:grid-cols-3 lg:grid-cols-1 gap-5">
                 {values.map(({ icon, title, description }, index) => (
                   <div key={index} className="flex flex-col lg:flex-row items-start lg:items-center gap-3">
-                    <div className="rounded-full p-2 bg-orange-700 hover:bg-orange-300">{icon}</div>
+                    <div className="rounded-full p-2 bg-orange-500/90 hover:bg-orange-500">{icon}</div>
                     <div className="flex flex-col text-gray-900">
                       <span className="font-semibold text-2xl">{title}</span>
                       <span className="">{description}</span>
@@ -232,13 +232,13 @@ const HomePage = () => {
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Get exclusive access to blockchain resources, course updates, and industry insights
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-y-3 max-w-md mx-auto">
+            <div className="flex flex-col justify-center gap-y-3 max-w-md mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 md:border-s md:border-y md:border-e-0 border border-white text-white rounded-lg md:rounded-e-none outline-none"
+                className="flex-1 px-4 py-3 rounded-md border"
               />
-              <Button variant="secondary" link="/" className="md:rounded-s-none border border-white outline-none">
+              <Button variant="secondary" link="/" className="rounded-md border border-white outline-none">
                 <Mail className="w-5 h-5 mr-2" />
                 Subscribe
               </Button>

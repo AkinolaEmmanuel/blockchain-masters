@@ -23,11 +23,11 @@ export default function Hero() {
                We fuel blockchain adoption by equipping people with the skills to learn, build, and grow in the Web3 space.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="md" link='/' className='hover:bg-transparent! hover:text-white hover:border-white! hover:border-2'>
+              <Button variant="secondary" size="md" link='/bootcamps-and-events' className='hover:bg-transparent! hover:text-white hover:border-white! hover:border-2'>
                 View all Programs <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button variant="outline" size="md" link='/' className="border-white text-white hover:bg-gray-100! hover:text-black!">
-                Join the Community
+              <Button variant="outline" size="md" link='/join-us/as-a-member' className="border-white text-white hover:bg-gray-100! hover:text-black!">
+                Join our Community
               </Button>
             </div>
           </motion.div>

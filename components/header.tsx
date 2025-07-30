@@ -16,7 +16,7 @@ const navItems = [
         name: "Who we are"
     },
     {
-        link: "/bootcamps&events",
+        link: "/bootcamps-and-events",
         name: "Our Bootcamps & Events"
     },
     {
@@ -107,7 +107,7 @@ export default function Header() {
                 )}
                
                 </div>
-                 <Button variant="primary" size="sm" link="https://forms.gle/jq6SxJsStEzMG6Ee7" className="hidden! lg:inline-block!">Start Learning</Button>
+                 <Button variant="primary" size="sm" link="/bootcamps-and-events" className="hidden! lg:inline-block!">Start Learning</Button>
                 <div className="flex lg:hidden">
                     {isMobile ?
                     <X className="text-black w-6 h-6" onClick={toggleNav}/>
@@ -120,9 +120,34 @@ export default function Header() {
                     {isMobile && (
                 <div className="h-fit py-2 grid items-center gap-4 grid-cols-2 md:grid-cols-3">
                     {navItems.map((item, index) => (
-                                <Link key={index} href={item.link} className="text-gray-600 hover:text-orange-600 hover:underline">{item.name}</Link>
+                       <div key={index}>
+                  {item.hasSubMenu ? 
+                    <NavigationMenu className="">
+                          <NavigationMenuList>
+                            <NavigationMenuItem>
+                              <NavigationMenuTrigger className={`text-gray-700 `}>
+                               {item.name}
+                              </NavigationMenuTrigger>
+                              <NavigationMenuContent className="flex flex-col p-3">
+                               {item.subMenu.map((item) => (
+                                <Link key={item.name} href={item.link} className={`w-28 h-8 hover:text-orange-600 hover:underline`}>
+                                    {item.name}
+                                </Link>
+                               ))}
+                              </NavigationMenuContent>
+                            </NavigationMenuItem>
+                          </NavigationMenuList>
+                    </NavigationMenu>
+                    :
+                 <Link href={item.link} className={`text-gray-700 hover:text-orange-600 hover:underline ${item.link == active ? 'text-orange-600': 'text-gray-700'}`}>
+                 {item.name}
+                 </Link>
+                  }
+                </div>
+                  
+                               
                     ))}
-                    <Button variant="primary" size="sm" link="/" className="">Start Learning</Button>
+                    <Button variant="primary" size="sm" link="/bootcamps-and-events" className="">Start Learning</Button>
                 </div>
              )}
           

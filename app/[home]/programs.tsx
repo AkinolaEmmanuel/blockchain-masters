@@ -13,7 +13,7 @@ export default function Programs({section}: {section?: string}) {
      {/* Featured Programs */}
       <section className="py-20 bg-white">
         <Container>
-         {section == "bootcamps" || section == "home" &&
+         {section == "home" &&
          <div className="flex flex-col lg:flex-row items-center justify-between">
           <SectionHeader 
             centered={false}
@@ -26,6 +26,15 @@ export default function Programs({section}: {section?: string}) {
             <span>Unlike many blockchain learning platforms that only scratch the surface or feel too complex, Blockchain Masters Academy bridges the gap with relatable teaching, real-life applications, and a supportive community. Whether you're exploring blockchain for the first time or aiming to build a career, we guide you from confusion to confidence. </span>
           </p>
           </div>
+          }
+
+          {section == "bootcamps" &&
+          <SectionHeader 
+            centered
+            title="Bootcamps & Events"
+            subtitle="Join our transformative bootcamps and events to master blockchain skills"
+            className="max-w-3xl mx-auto"
+            />
           }
 
            {section == "events" &&
@@ -41,9 +50,17 @@ export default function Programs({section}: {section?: string}) {
 
         </Container>
         <Container className="my-10">
-          {section == "bootcamps" || section == "home" &&
+          {section == "bootcamps" &&
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programs.map((program, index) => (
+              <FeatureCard key={index} {...program} />
+            ))}
+          </div>
+          }
+
+          {section == "home" &&
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {programs.slice(0, 3).map((program, index) => (
               <FeatureCard key={index} {...program} />
             ))}
           </div>
@@ -58,7 +75,7 @@ export default function Programs({section}: {section?: string}) {
           }
           {section == "home" &&
           <div className="text-center mt-12">
-            <Button size="md" link="/bootcamps&events">
+            <Button size="md" link="/bootcamps-and-events">
               View All Programs <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>

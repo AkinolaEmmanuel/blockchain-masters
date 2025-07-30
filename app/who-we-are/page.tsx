@@ -59,7 +59,7 @@ const Whoweare = () => {
                   <p key={index}>{item}</p>
                   ))}
 
-                    <Button variant="primary" size="md" link="/" className="mt-8">
+                    <Button variant="primary" size="md" link="/join-us/as-a-member" className="mt-8">
                               Join Our Community
                     </Button>
                   </div>

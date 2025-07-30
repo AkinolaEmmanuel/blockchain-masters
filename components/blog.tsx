@@ -40,7 +40,7 @@ export function Blog({section}:{section: string}) {
                 ))}
               </div>
               <div className="text-center mt-12">
-                <Button variant="outline" size="md" link="/">
+                <Button variant="outline" size="md" link="/blog">
                   View All Posts <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </div>

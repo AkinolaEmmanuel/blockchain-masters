@@ -131,9 +131,9 @@ export default function Partner() {
   return (
    <>
    
-   <section className='py-10'>
+   <section className='py-10 space-y-10 xl:space-y-20'>
     <Container>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center justify-between">
         <SectionHeader
         title='Become a Partner'
         subtitle="Let's shape the future of blockchain together"
@@ -205,10 +205,14 @@ export default function Partner() {
     </div>
         </div>
 
-        <div className="w-full mx-auto my-5 lg:my-10 space-y-5 text-center">
-            <h1 className='text-5xl font-bold'>Build the <span className='text-orange-500 font-semibold'>Future </span>Together</h1>
+        
+    </Container>
+
+    <Container>
+      <div className="w-full mx-auto my-10 space-y-5 text-center">
+            <h1 className='text-3xl lg:text-5xl font-bold'>Build the <span className='text-orange-500 font-semibold'>Future </span>Together</h1>
             <p className='text-xl font-semibold'>Let us shape the future of Blockchain in Africa.</p>
-            <Button variant='primary' size='md' link='https://forms.gle/VLBkpqvrGgZd7hKZ7'>Become a Partner</Button>
+            <Button variant='primary' size='md' link='https://forms.gle/VLBkpqvrGgZd7hKZ7' target='_blank'>Become a Partner</Button>
         </div>
     </Container>
    </section>

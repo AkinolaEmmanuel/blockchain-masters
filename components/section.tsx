@@ -17,7 +17,7 @@ export const SectionHeader = ({ title, subtitle, centered = true, ...props }: { 
       {...props}>
       <div className={`flex items-center ${centered ? 'justify-center' : ``}`}>
       <Stars className="w-6 h-6 text-orange-500 mr-2" />
-        <h2 className="text-lg md:text-xl text-gray-900 my-4">{title}</h2>
+        <h2 className="text-lg md:text-xl text-black my-4">{title}</h2>
        </div>
     {subtitle && (  
       <h1 className={`${centered ? 'text-center' : 'text-start'} text-3xl md:text-4xl font-bold text-gray-900`}> {subtitle}</h1>

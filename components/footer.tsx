@@ -37,8 +37,7 @@ export default function Footer() {
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="/who-we-are" className="text-gray-400 hover:text-white">About Us</a></li>
-                <li><a href="/bootcamps" className="text-gray-400 hover:text-white">Bootcamps</a></li>
-                <li><a href="/events" className="text-gray-400 hover:text-white">Events</a></li>
+                <li><a href="/bootcamps&events" className="text-gray-400 hover:text-white">Bootcamps & Events</a></li>
                 <li><a href="/blog" className="text-gray-400 hover:text-white">Blog</a></li>
               </ul>
             </div>
@@ -47,8 +46,9 @@ export default function Footer() {
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="/contact-us" className="text-gray-400 hover:text-white">Contact Us</a></li>
-                <li><a href="/join-us" className="text-gray-400 hover:text-white">Join Us</a></li>
-                {/* <li><a href="#" className="text-gray-400 hover:text-white">Help Center</a></li>
+                <li><a href="/join-us/as-a-member" className="text-gray-400 hover:text-white">Join Us As a Member</a></li>
+                <li><a href="/join-us/as-a-partner" className="text-gray-400 hover:text-white">Join Us As a Partner</a></li>
+                {/* 
                 <li><a href="#" className="text-gray-400 hover:text-white">Community</a></li> */}
               </ul>
             </div>
@@ -57,10 +57,10 @@ export default function Footer() {
               <h4 className="font-semibold mb-4">Connect</h4>
               <p className="text-gray-400 text-sm mb-2">chainmastersacademy@gmail.com</p>
               <div className="flex space-x-4">
-                <a href="https://www.facebook.com/share/19XZ3jixUZ/" className="text-gray-400 hover:text-white">Facebook</a>
-                <a href="https://x.com/BlockCMA" className="text-gray-400 hover:text-white">Twitter</a>
-                <a href="https://www.linkedin.com/company/blockchainmastersacademy/" className="text-gray-400 hover:text-white">LinkedIn</a>
-                <a href="https://t.me/BlockCMA" className="text-gray-400 hover:text-white">Telegram</a>
+                <a target='_blank' href="https://www.facebook.com/share/19XZ3jixUZ/" className="text-gray-400 hover:text-white">Facebook</a>
+                <a target='_blank' href="https://x.com/BlockCMA" className="text-gray-400 hover:text-white">Twitter</a>
+                <a target='_blank' href="https://www.linkedin.com/company/blockchainmastersacademy/" className="text-gray-400 hover:text-white">LinkedIn</a>
+                <a target='_blank' href="https://t.me/BlockCMA" className="text-gray-400 hover:text-white">Telegram</a>
               </div>
             </div>
           </div>
