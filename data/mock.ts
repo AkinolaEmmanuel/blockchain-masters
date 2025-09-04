@@ -1,4 +1,5 @@
 
+import { EventCardProps } from '@/components/cards';
 import { 
   Play, 
   Users, 
@@ -73,6 +74,75 @@ export const programs = [
     description: "Design intuitive, user-friendly Web3 apps with a focus on accessibility, usability, and decentralized UX flows."
   }
 ]
+
+export const sampleEvents: EventCardProps[] = [
+    {
+      id: '1',
+      title: '3-Month $10k Blockchain for Good Students Campaign by BMA x Bybit',
+      description: 'In partnership with Blockchain for Good Alliance, we initiated a series of spaces and AMA sessions where our community members learn about Blockchain as well as the need to learn relevant and productive skills to stay positioned for possible opportunities and privileges that may come their way. We had different guest speakers share mindblowing insights and strategies.',
+      image: '/Blockchain Masters flyer for ads with venue.jpg', 
+      // date: 'Jan 2025 - Mar 2025',
+      location: 'Virtual Event',
+      // attendees: 500,
+      category: 'Campaign',
+      status: 'completed' as const,
+      link: 'https://x.com/BlockCMA/status/1952169936979193901',
+      linkText: 'View on X',
+      featured: false
+    },
+    {
+      id: '2',
+      title: 'Positioning for Bybit\'s Internships & Opportunities',
+      description: 'Jobs are everywhere but not for everyone. Yea, you heard that right. We are pleased to host two amazing personalities doing massively on the web 3 space for years now. They will be sharing so much alphas that would land you your next job opportunity. Blockchain for Good Student Campaign isn\'t just for the $10k prize but has lot of opportunities you ought not to miss 😊. Imagine joining a campaign doing so much for fun and landing your dream job 😲',
+      image: '/Blockchain Masters Academy 12.jpg',
+      date: 'Aug 8, 2025',
+      location: 'Online',
+      // attendees: 250,
+      category: 'Workshop',
+      status: 'completed' as const,
+      link: 'https://t.me/BlockCMA/1687',
+      linkText: 'Check it out'
+    },
+    {
+      id: '3',
+      title: 'AMA with BGA Team',
+      description: 'On Saturday being the 9th of August 2025, we “BGA Team" joined us for an AMA session 🔥 After dissecting "Positioning for Bybit\'s Internship and Job Opportunities" and having our speakers shared alphas around Web 3 jobs, we dived straight to receiving a representative from BGA who shared more about the opportunities presented by Bybit and BGA 🔥 You shouldn\'t miss any of these for any reason. The goal is simple - Blockchain for Everyone 🔥',
+      image: '/Blockchain Masters Academy 15-1.jpg',
+      date: 'Aug 9, 2025',
+      location: 'Online',
+      // attendees: 150,
+      category: 'Workshop',
+      status: 'completed' as const,
+      link: 'https://t.me/BlockCMA/1704',
+      linkText: 'Click to learn more'
+    },
+    {
+      id: '4',
+      title: 'Becoming a Creative Web 3 Content Creator',
+      description: "Tuesday being 12th of August 2025, we had 'Becoming a Creative Web 3 Content Creator'. It was such a mind-blowing moment with our amazing speakers. We had a Creative Designer and a Web 3 Video Content Creator and Editor... It was such an explosive time together.",
+      image: "/Blockchain Masters Academy-1.jpg",
+      date: 'Aug 12, 2025',
+      location: 'Online',
+      // attendees: 200,
+      category: 'Workshop',
+      status: 'completed' as const,
+      link: 'https://t.me/BlockCMA/1723',
+      linkText: 'Check it out'
+    },
+    {
+      id: '5',
+      title: 'Becoming an Authority in the Web 3 Space',
+      description: "On Friday being 15th August 2025, we had a very interesting session with a true OG. Our speaker shared so much on Becoming an authority in the Web 3 space Man has built so much legacy and wealth over time, and some of the secrets he shared were mindblowing. We are heading to the moon 🚀",
+      image: "/Blockchain Masters Academy Authority in web3.jpg",
+      date: 'Aug 15, 2025',
+      location: 'Online',
+      // attendees: 300,
+      category: 'Workshop',
+      status: 'completed' as const,
+      link: 'https://t.me/BlockCMA/1740',
+      linkText: 'Check it out'
+    }
+  ];
 
 export const events = [
   {

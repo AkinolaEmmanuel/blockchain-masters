@@ -1,7 +1,7 @@
 import { Button } from '@/components/button'
-import { FeatureCard } from '@/components/cards'
+import { FeatureCard, EventCard } from '@/components/cards'
 import { Container, SectionHeader } from '@/components/section'
-import { programs, events } from '@/data/mock'
+import { programs, events, sampleEvents } from '@/data/mock'
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
 
@@ -31,8 +31,8 @@ export default function Programs({section}: {section?: string}) {
           {section == "bootcamps" &&
           <SectionHeader 
             centered
-            title="Bootcamps & Events"
-            subtitle="Join our transformative bootcamps and events to master blockchain skills"
+            title="Our Bootcamps"
+            subtitle="Join our transformative bootcamps and learn to master blockchain skills"
             className="max-w-3xl mx-auto"
             />
           }
@@ -50,13 +50,7 @@ export default function Programs({section}: {section?: string}) {
 
         </Container>
         <Container className="my-10">
-          {section == "bootcamps" &&
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programs.map((program, index) => (
-              <FeatureCard key={index} {...program} />
-            ))}
-          </div>
-          }
+         
 
           {section == "home" &&
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,7 +62,15 @@ export default function Programs({section}: {section?: string}) {
 
           {section == "events" &&
            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {events.map((program, index) => (
+            {sampleEvents.map((program, index) => (
+              <EventCard key={index} {...program} />
+            ))}
+          </div>
+          }
+
+           {section == "bootcamps" &&
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {programs.map((program, index) => (
               <FeatureCard key={index} {...program} />
             ))}
           </div>
@@ -80,7 +82,7 @@ export default function Programs({section}: {section?: string}) {
             </Button>
           </div>
             }
-            {section == "events" &&
+            {section == "bootcamps" &&
             <div className="text-black text-center space-y-5 mt-12">
           <p className='text-2xl font-medium'>Make inquiries about our bootcamps</p>
           <div className="flex items-center justify-center gap-5">

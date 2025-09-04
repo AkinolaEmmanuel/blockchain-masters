@@ -4,8 +4,6 @@ import { PageHeader } from '@/components/section'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import Programs from '../[home]/programs';
-import { Button } from '@/components/button';
-import { ArrowRight } from 'lucide-react';
 import { GlobalLoader } from '@/components/global-loader';
 import Testimonials from '../[home]/testimonials';
 import Faqs from '../[home]/faqs';

@@ -66,28 +66,32 @@ const HomePage = () => {
       <Hero />
 
       {/* Who We Are Section */}
-      <section className="my-0 md:my-20">
-        <Container className="flex flex-col lg:flex-row items-center justify-between">
-          <SectionHeader centered={false} title="Who we are" subtitle="Blockchain Masters"></SectionHeader>
-          <p className="text-justify text-black text-lg max-w-lg md:my-5">
-            <span>Blockchain Masters Academy is an EdTech platform dedicated to making blockchain and Web3 education accessible, practical, and career-driven. </span>
-            <span>We believe that blockchain isn't just for coders, tech bros, or crypto nerds but for everyone. Whether you’re a student, a small business owner, or someone simply curious about Web3 We’re here to help you understand Blockchain, use it, and grow with it.</span>
-          </p>
+      <section className="my-0 md:my-10">
+        <Container className="w-full flex flex-col lg:flex-row items-center justify-center">
+          <SectionHeader centered title="Who we are"/>
+        
         </Container>
 
         {/* Stats */}
-        <Container className="my-10 flex flex-col gap-y-10 lg:flex-row items-center justify-between">
+        <Container className="flex flex-col gap-y-10 lg:flex-row items-center justify-between">
           <div className="flex-1 bg-orange-400 p-5">
           <Image src={"/students.jpg"} width={600} height={600} alt="" className="rounded-sm"/>
           </div>
-          <div className="flex-1 space-y-5">
-          <h1 className="font-bold text-3xl text-center text-black mb-5">Our Track Record Till Date</h1>
+          <div className="flex-1 space-y-5 p-5 lg:p-10">
+            <h1 className="font-bold text-3xl text-black">BlockChain Masters</h1>
+            <p className="text-black text-lg md:my-5">
+            <span>Blockchain Masters Academy is an EdTech platform dedicated to making blockchain and Web3 education accessible, practical, and career-driven. </span>
+            <span>We believe that blockchain isn't just for coders, tech bros, or crypto nerds but for everyone. Whether you’re a student, a small business owner, or someone simply curious about Web3 We’re here to help you understand Blockchain, use it, and grow with it.</span>
+            </p>
+            <Button variant="primary" size="md" link="/who-we-are" className="mt-5">Learn More <ArrowRight className="w-4 h-4 ml-2"/></Button>
+          {/* <h1 className="font-bold text-3xl text-center text-black mb-5">Our Track Record Till Date</h1>
           <div className="grid grid-cols-2 gap-5">
+           <CounterCard icon={Users} count={9700} label="Community Members" delay={0} />
             <CounterCard icon={Users} count={10500} label="Students Trained" delay={0} />
             <CounterCard icon={GraduationCap} count={8500} label="Graduates" delay={0.2} />
             <CounterCard icon={Award} count={92} label="Success Rate %" delay={0.4} />
             <CounterCard icon={Building} count={150} label="Hiring Partners" delay={0.6} />
-          </div>
+          </div> */}
           </div>
      
         </Container>
